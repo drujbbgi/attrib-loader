@@ -1,0 +1,6 @@
+[attrib-loader-enabled] {
+    visibility: hidden;
+}
+[attrib-loader-enabled].ready {
+    visibility: visible;
+}
