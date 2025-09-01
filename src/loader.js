@@ -1,12 +1,6 @@
-(function () {
+(function (global) {
   "use strict";
 
-  /**
-   * Replace placeholders {{Key}} inside a container with values from JSON
-   * @param {string} rawJson - Raw JSON string (can include &quot; and ; at the end)
-   * @param {string} containerSelector - CSS selector for containers (default: [attrib-loader-enabled])
-   * @param {object} options - { hideMissing: boolean }
-   */
   function applyAttributes(rawJson, containerSelector = "[attrib-loader-enabled]", options = {}) {
     try {
       let decoded = rawJson.replace(/&quot;/g, '"').trim();
@@ -47,4 +41,5 @@
   }
 
   global.AttribLoader = { apply: applyAttributes };
+
 })(window);
