@@ -46,7 +46,5 @@
     return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 
-  window.AttribLoader = {
-    apply: applyAttributes
-  };
-})();
+  global.AttribLoader = { apply: applyAttributes };
+})(window);
